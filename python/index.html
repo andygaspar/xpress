@@ -1,0 +1,1068 @@
+<html xmlns:Dash="http://www.fico.com/xpress">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   
+      <title>FICO Xpress Optimization</title><style type="text/css">
+.bodytext { font-weight: normal; font-size: 14px; line-height: normal;
+    color: #212121;
+    font-style: normal; font-family: 'Roboto', Geneva, sans-serif
+}
+.bodybold {
+    font-weight: bold; font-size: 14px; line-height: normal;
+    font-style: normal; font-family: 'Roboto', Geneva, sans-serif;
+    color: #000000;
+}
+.bodybolditalic {
+    font-weight: 500; font-size: 14px; line-height: normal;
+    font-style: italic; font-family: 'Roboto', Geneva, sans-serif;
+}
+.bodyboldui {
+    font-weight: bold; font-size: 14px; line-height: normal;
+    font-style: italic; font-family: 'Roboto', Geneva, sans-serif;
+    text-decoration: underline;
+}
+a { font-weight: 500; color: #00629b; text-decoration: none;}
+a:hover { font-weight: 500; background-color: #f2f2f2; text-decoration: underline;}
+.asectionbar { color: #000000; }
+.asectionbar:hover { background-color: #cccccc; }
+body { background-color: #FFFFFF; color: #000000;
+    font-family: 'Roboto', Geneva, Helvetica, Arial, sans-serif;
+}
+table, ul, ol { color: #000000;
+    font-family: 'Roboto', Geneva, Helvetica, Arial, sans-serif;
+    font-size: 12px }
+.chevrondown:before { content: "\25be"; } 
+.chevronright:before { content: "\25b8"; }
+.Code { font-family: 'Roboto Mono', Courier; }
+.headerbar { font-weight: normal; font-size: 24px; padding: 15px;
+    color: #FFFFFF; background-color: #00629b; line-height: normal;
+    font-style: normal; font-family: 'Roboto', Geneva, sans-serif;
+}
+.sectionbar {
+    font-weight: 500; font-size: 15px; padding: 5px;  
+    background-color: #cccccc; color: #212121; line-height: normal;
+    font-style: normal; font-family: 'Roboto', Geneva, sans-serif;
+}
+.docentry {
+    font-weight: 500; font-size: 12px; color: #212121;
+    line-height: normal; font-style: italic; font-family: 'Roboto', sans-serif;
+}
+.titletext {
+    font-weight: bold; font-size: 14px; color: #212121; line-height: normal;
+    font-style: normal; font-family: 'Roboto', Geneva, sans-serif;
+}
+.font7 { font-family: 'Roboto', sans-serif; font-size: 11px; line-height: 1; 
+    font-weight: 400; color: #6e6d6a; text-decoration: none; }
+td { 
+    font-weight: normal; font-size: 14px; line-height: normal;
+    color: #000000;
+    font-style: normal; font-family: 'Roboto', Geneva, sans-serif;
+}
+.FctItem
+	  { color: #003f5f;  font-size: 14px; font-style: normal; 
+	    font-weight: bold; margin-bottom: 0pt; margin-left: 2pt; 
+	    margin-right: 0pt; margin-top: 12pt; text-align: left; 
+	    text-decoration: none; text-indent: 0pt; text-transform: none; 
+	    vertical-align: baseline }
+  </style><script language="JavaScript" type="text/javascript">
+     function toggleDiv(divid)
+     {
+       if(document.getElementById(divid).style.display == "none")
+       {
+         document.getElementById(divid).style.display = "block";
+         document.getElementById(divid+"icon2").style.display = "inline";
+         document.getElementById(divid+"icon1").style.display = "none";
+       }
+       else
+       {
+ 	 document.getElementById(divid).style.display = "none";
+         document.getElementById(divid+"icon2").style.display = "none";
+         document.getElementById(divid+"icon1").style.display = "inline";
+       }
+     }
+     function setVisible(divid)
+     {
+       if(document.getElementById(divid).style.display == "none")
+       {
+         document.getElementById(divid).style.display = "block";
+       }
+     }
+  </script></head>
+   <body leftmargin="0" topmargin="0" background="" bgcolor="#ffffff" marginheight="0" marginwidth="0" text="#000000">
+      <table border="0" cellpadding="0" cellspacing="0" height="600" width="100%">
+         <tbody>
+            <tr height="60">
+               <td class="headerbar">FICO<sup>&reg;</sup> Xpress Optimization
+               </td>
+            </tr>
+            <tr>
+               <td align="left" valign="top">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                     <tbody>
+                        <tr>
+                           <td>&nbsp;<br></td>
+                        </tr>
+                        <tr>
+                           <td>&nbsp;<br></td>
+                        </tr>
+                        <tr>
+                           <td width="15">&nbsp;</td>
+                           <td align="left" valign="top" width="850">
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                 <tbody>
+                                    <tr>
+                                       <td colspan="2">
+                                          <h2 class="titletext" align="left">Xpress Python examples</h2>
+                                          <div class="bodytext">
+                                             <p class="Body">Examples of using Xpress from Python</p>
+                                          </div><br><br></td>
+                                    </tr>
+                                    <tr valign="top"><a name="python_optimizer"></a><td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('python_optimizer');"><span class="bodyboldli"><i class="chevronright" style="display:inline;right: 2px;" id="python_optimizericon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="python_optimizericon2"></i>Python examples using the Xpress Optimizer</span></a></td>
+                                    </tr>
+                                    <tr valign="top">
+                                       <td></td>
+                                       <td>
+                                          <div style="display:none" id="python_optimizer">
+                                             <table border="0" cellpadding="1" cellspacing="0" width="800">
+                                                <tr>
+                                                   <td><br></td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Arrays_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Arrays_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Arrays_pythonicon2"></i>Using NumPy arrays to create variables</span></a>: Using NumPy arrays
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Arrays_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Use NumPy arrays for creating a 3-dimensional array of variables, then use it to create a model.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_array.py"><span class="code">example_array.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('BBTree_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="BBTree_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="BBTree_pythonicon2"></i>Visualize the BB tree</span></a>: Using the newnode callback
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="BBTree_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Shows how to visualize the BB tree of a problem after (partially) solving it. </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_bbtree.py"><span class="code">example_bbtree.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Infeasible_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Infeasible_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Infeasible_pythonicon2"></i>Irreducible Infeasible Sets</span></a>: Using Irreducible Infeasible Sets
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Infeasible_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Shows how to analyze an infeasible problem by retrieving an irreducible infeasible subset</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_infeasible.py"><span class="code">example_infeasible.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('LoadLP_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="LoadLP_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="LoadLP_pythonicon2"></i>Loading a problem</span></a>: Loading a problem directly
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="LoadLP_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Shows how directly load a problem and solve it in Python</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_loadlp.py"><span class="code">example_loadlp.py</span></a>, <a href="./example_loadqp.py"><span class="code">example_loadqp.py</span></a>, <a href="./example_loadqcqp.py"><span class="code">example_loadqcqp.py</span></a>, <a href="./example_loadmiqcqp.py"><span class="code">example_loadmiqcqp.py</span></a>, <a href="./example_loadmiqcqp_sos.py"><span class="code">example_loadmiqcqp_sos.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('userfunc_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="userfunc_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="userfunc_pythonicon2"></i>Modeling with user functions</span></a>: Modeling with user functions
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="userfunc_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Shows how to create and solve a nonlinear problem whose constraints and objective functions are defined as user functions</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_userfunc.py"><span class="code">example_userfunc.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Modelling_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Modelling_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Modelling_pythonicon2"></i>Using Python model objects to build a problem</span></a>: Modelling using Python objects
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Modelling_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Demonstrate how variables, or arrays thereof, and constraints, or arrays of constraints, can be added into a problem. Prints
+                                                                  the solution and all attributes/controls of the problem.
+                                                               </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_modeling.py"><span class="code">example_modeling.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('SmallChange_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="SmallChange_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="SmallChange_pythonicon2"></i>Changing the optimization problem</span></a>: Changes to a problem
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="SmallChange_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Changing an optimization problem using the Xpress Python interface.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./small_change.py"><span class="code">small_change.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Modify_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Modify_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Modify_pythonicon2"></i>Extending a problem</span></a>: Extending a problem
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Modify_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Construct a problem using addVariable and addConstraint, then use the Xpress API routines to amend the problem with rows and
+                                                                  quadratic terms.
+                                                               </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_modify.py"><span class="code">example_modify.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('NumPy2_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="NumPy2_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="NumPy2_pythonicon2"></i>Using NumPy and Xpress</span></a>: Using NumPy and Xpress
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="NumPy2_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">An example of printing a matrix of random numbers and a problem formulation that uses the xpress.Dot() operator to formulate
+                                                                  constraints simply. 
+                                                                  	            Note that the NumPy dot operator is not suitable here as the result is an expression in the Xpress variables.
+                                                                  
+                                                               </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_numpy1.py"><span class="code">example_numpy1.py</span></a>, <a href="./example_numpy2.py"><span class="code">example_numpy2.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('MaxFS_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="MaxFS_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="MaxFS_pythonicon2"></i>Minimizing distance from constraints</span></a>: 
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="MaxFS_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Given an infeasible LP, find the feasible subsystem of constraints of maximum cardinality.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_phase1.py"><span class="code">example_phase1.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('QCQP_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="QCQP_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="QCQP_pythonicon2"></i>Solving a quadratically constrained problem</span></a>: Building quadratic expressions
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="QCQP_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Solve a quadratically constrained problem</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_qcqp.py"><span class="code">example_qcqp.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('QCQP_nonconvex_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="QCQP_nonconvex_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="QCQP_nonconvex_pythonicon2"></i>Solving a nonconvex quadratic problem</span></a>: Building quadratic expressions
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="QCQP_nonconvex_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Solve a nonconvex quadratic problem</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_quadnonconvex.py"><span class="code">example_quadnonconvex.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('QP_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="QP_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="QP_pythonicon2"></i>Solving a quadratically problem</span></a>: Building quadratic expressions
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="QP_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Solve a quadratic problem</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_quadratic.py"><span class="code">example_quadratic.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Resolve_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Resolve_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Resolve_pythonicon2"></i>Repeatedly solving a problem</span></a>: Solving a problem multiple times
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Resolve_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Reads a problem, solves it, then adds a constraint and re-solves it</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_resolve.py"><span class="code">example_resolve.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Indicators_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Indicators_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Indicators_pythonicon2"></i>Using indicators</span></a>: Model with indicators
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Indicators_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Construct a problem from scratch with variables of various types. Adds indicator constraints, Special Ordered Sets (SOSs),
+                                                                  and 
+                                                                  	  shows how to retrieve such data once it has been added to the problem using the API functions
+                                                               </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_SOS_indicators.py"><span class="code">example_SOS_indicators.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('TSP_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="TSP_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="TSP_pythonicon2"></i>The travelling salesman problem</span></a>: Using Xpress callbacks
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="TSP_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Retrieves an example fromn http://www.math.uwaterloo.ca/tsp/world/countries.html
+                                                                  and creates a corresponding TSP instance, then solves it using the Xpress Optimizer
+                                                                  library with the appropriate callback. Once the optimization is over
+                                                                  (i.e. the time limit is reached or we find an optimal solution) the
+                                                                  optimal tour is displayed using matplotlib. 
+                                                               </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_tsp.py"><span class="code">example_tsp.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('WriteRead_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="WriteRead_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="WriteRead_pythonicon2"></i>Writing and reading problem files</span></a>: Writing and reading a problem to disk
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="WriteRead_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Create a few variables, then build a problem and save it to a file.
+                                                                  Re-read that file into a new problem and solve it 
+                                                               </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./example_write_read.py"><span class="code">example_write_read.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('FeasPump_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="FeasPump_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="FeasPump_pythonicon2"></i>The feasiblity pump</span></a>: Writing and reading a problem to disk
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="FeasPump_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Feasibility pump (prototype) using the Xpress Python interface.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./feas_pump.py"><span class="code">feas_pump.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Knapsack_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Knapsack_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Knapsack_pythonicon2"></i>Knapsack problem</span></a>: MIP problem with binary variables
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Knapsack_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Example of a knapsack problem formulated with the Xpress Python interface.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./knapsack.py"><span class="code">knapsack.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Queens_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Queens_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Queens_pythonicon2"></i>The n-queens problem</span></a>: Puzzle modeling
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Queens_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">The n queens: place n queens on an nxn chessboard so that none of them can be eaten in one move.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./n_queens.py"><span class="code">n_queens.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Netflow_python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Netflow_pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Netflow_pythonicon2"></i>Min-cost-flow problem </span></a>: Modelling a graph problem
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Netflow_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">solving a min-cost-flow problem using the Xpress Python interface.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./netflow.py"><span class="code">netflow.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table><br></div>
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><a href="javascript:;" onmousedown="toggleDiv('Soduko_Python');"><span class="bodybolditalic"><i class="chevronright" style="display:inline;right: 2px;" id="Soduko_Pythonicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="Soduko_Pythonicon2"></i>Solving Sudoku</span></a>: Puzzle modeling
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Soduko_Python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">4 (medium-difficult)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Place numbers from 1 to 9 into a 9x9 grid such that no number repeats in any row, in any column, and in any 3x3 sub-grid.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./sudoku.py"><span class="code">sudoku.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table>
+                                                      </div><br></td>
+                                                </tr>
+                                             </table><br></div>
+                                       </td>
+                                    </tr>
+                                    <tr valign="top"><a name="python_nonlinear"></a><td colspan="2"><a href="javascript:;" onmousedown="setVisible('Rosenbrock_python');toggleDiv('python_nonlinear');"><span class="bodyboldli"><i class="chevronright" style="display:inline;right: 2px;" id="python_nonlinearicon1"></i><i class="chevrondown" style="display:none;right: 2px;" id="python_nonlinearicon2"></i>Python examples using Xpress Nonlinear</span></a></td>
+                                    </tr>
+                                    <tr valign="top">
+                                       <td></td>
+                                       <td>
+                                          <div style="display:none" id="python_nonlinear">
+                                             <table border="0" cellpadding="1" cellspacing="0" width="800">
+                                                <tr>
+                                                   <td><br></td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td colspan="2"><span class="bodybolditalic">Solving a quadratically constrained problem</span>: Solve a nonlinear problem
+                                                   </td>
+                                                </tr>
+                                                <tr valign="top">
+                                                   <td width="25">&nbsp;</td>
+                                                   <td class="bodytext" width="825">
+                                                      <div style="display:none" id="Rosenbrock_python">
+                                                         <table border="0" cellpadding="1" cellspacing="0" width="825">
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Type:</span></td>
+                                                               <td align="left" valign="top"><b>Programming</b></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" width="100"><span class="FctItem">Rating:</span></td>
+                                                               <td align="left" valign="top">2 (easy-medium)</td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td align="left" valign="top" width="100"><span class="FctItem">Description:</span></td>
+                                                               <td align="left" valign="top">Define the well-known Rosenbrock function and minimize it.</td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                               <td align="left" width="100"><span class="FctItem">File(s):</span></td>
+                                                               <td><a href="./rosenbrock.py"><span class="code">rosenbrock.py</span></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                               <td colspan="2" color="#a0a0a0">
+                                                                  <hr noshade>
+                                                               </td>
+                                                            </tr>
+                                                         </table>
+                                                      </div><br></td>
+                                                </tr>
+                                             </table>
+                                          </div><br></td>
+                                    </tr>
+                                    <tr>
+                                       <td><br>&nbsp;<br></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+            <tr height="20">
+               <td colspan="2">
+                  <p class="bodytext">&nbsp;&nbsp;Comments or suggestions about the examples?
+                     Please e-mail <a href="mailto:support@fico.com?subject=Xpress examples">support@fico.com</a><br>&nbsp;
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td align="center" bgcolor="#00609c" height="20" width="100%"></td>
+            </tr>
+            <tr>
+               <td align="left" height="10" width="850">&nbsp;&nbsp;<font class="font7">&copy; Copyright 1983-2018 Fair Isaac Corporation. All rights reserved</font></td>
+            </tr>
+            <tr height="10">
+               <td>&nbsp;<br></td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
